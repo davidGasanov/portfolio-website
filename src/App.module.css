@@ -1,0 +1,54 @@
+/* Global CSS rules */
+
+@font-face{
+    font-family: 'Helvetica';
+    src: url('./fonts/Helvetica.ttf');
+}
+
+@font-face{
+    font-family: 'Helvetica';
+    src: url('./fonts/Helvetica-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: 'Garamond';
+    src: url('./fonts/Garamond Regular.ttf');
+}
+
+@font-face{
+    font-family: 'Garamond';
+    src: url('./fonts/Garamond.ttf');
+    font-weight: bold;
+}
+
+:root {
+    --primary-bg: #f5f3f3;
+    --primary-dark: #19272A;
+    --primary-light: #FE5448;
+}
+
+body,h1,h2,p,ul{
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+p{
+    font-family: Helvetica;
+    max-width: 690px;
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
