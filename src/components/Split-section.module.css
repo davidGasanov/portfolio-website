@@ -91,7 +91,7 @@
   max-width: 400px;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
-  row-gap: 3rem;
+  row-gap: 2rem;
 }
 
 .skill {

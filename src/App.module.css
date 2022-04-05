@@ -25,7 +25,9 @@
 :root {
     --primary-bg: #f2eeee;
     --primary-dark: #19272A;
+    --secondary-dark: #506468;
     --primary-light: #FE5448;
+
 }
 
 body,h1,h2,p,ul{

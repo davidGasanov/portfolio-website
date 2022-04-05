@@ -1,0 +1,35 @@
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-top: 20px solid var(--primary-dark);
+  background-color: var(--primary-bg);
+  align-items: center;
+  padding: 2rem;
+}
+
+.bgPrimary {
+  background-color: var(--primary-bg);
+}
+
+.centered {
+  text-align: center;
+  margin: 0;
+}
+
+.skillsContainer{
+  width: 90%;
+  max-width: 1600px;
+  display: flex;
+  justify-content: center;
+}
+
+.mediumText{
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: normal;
+}
+
+
