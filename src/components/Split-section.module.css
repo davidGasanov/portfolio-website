@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  border-bottom: 10px solid var(--primary-dark);
+  border-top: 20px solid var(--primary-dark);
 }
 
 .splitSection {
@@ -13,21 +13,46 @@
   justify-content: center;
 }
 
+.nameDesc {
+  margin-bottom: 3.5rem;
+}
+
+.devName {
+  font-size: 40px;
+  line-height: 2rem;
+  margin: 0;
+  font-family: "Abril Fatface";
+}
+
+.devDesc {
+  margin-top: 5px;
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: normal;
+}
+
 .bgPattern {
   color: white;
   background-image: url("data:image/svg+xml,<svg id='patternId' width='200%' height='200%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='70' height='8' patternTransform='scale(3) rotate(45)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(191, 25%, 13%, 1)'/><path d='M-.02 22c8.373 0 11.938-4.695 16.32-9.662C20.785 7.258 25.728 2 35 2c9.272 0 14.215 5.258 18.7 10.338C58.082 17.305 61.647 22 70.02 22M-.02 14.002C8.353 14 11.918 9.306 16.3 4.339 20.785-.742 25.728-6 35-6 44.272-6 49.215-.742 53.7 4.339c4.382 4.967 7.947 9.661 16.32 9.664M70 6.004c-8.373-.001-11.918-4.698-16.3-9.665C49.215-8.742 44.272-14 35-14c-9.272 0-14.215 5.258-18.7 10.339C11.918 1.306 8.353 6-.02 6.002'  stroke-width='1' stroke='hsla(190, 13%, 36%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   display: flex;
-  flex-basis: 30%;
+  flex-basis: clamp(40%, 35%, 30%);
+  align-items: center;
+  justify-content: space-around;
 }
 
 .bgPrimary {
   background-color: var(--primary-bg);
-  flex-basis: 70%;
+  flex-basis: clamp(60%, 65%, 70%);
 }
 
-.largeText {
-  font-size: 2.5rem;
+.navButton {
+  font-size: 1.7rem;
   font-family: "Helvetica";
+  min-width: 15rem;
+  color: var(--primary-dark);
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
 .pageNavigation {
@@ -50,19 +75,33 @@
   max-width: 500px;
   margin: 0;
   z-index: 0;
- 
 }
 
 .lineRight {
-    left: 1rem;
-    align-self: flex-end;
+  left: 1rem;
+  align-self: flex-end;
 }
-.centered{
-    text-align: center;
+.centered {
+  text-align: center;
 }
 
-.skills{
-    display: flex;
+.skills {
+  display: grid;
+  width: 90%;
+  max-width: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  row-gap: 3rem;
+}
+
+.skill {
+  width: auto;
+  text-align: center;
+}
+
+.largeText {
+  font-size: 3rem;
+  font-family: Helvetica;
 }
 
 @media (min-width: 800px) {

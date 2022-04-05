@@ -36,12 +36,12 @@ function About() {
       <div className={`${styles.splitSection} ${styles.bgPattern}`}>
         <h2 className={`${styles.largeText} ${styles.centered}`}>SKILL STACK</h2>
         <ul className={`${styles.skills}`}>
-          <li><SiHtml5 size={'36px'}/></li>
-          <li><SiCss3 size={'36px'}/></li>
-          <li><SiJavascript size={'36px'}/></li>
-          <li><SiReact size={'36px'}/></li>
-          <li><SiAdobeillustrator size={'36px'}/></li>
-          <li><SiAdobephotoshop size={'36px'}/></li>
+          <li className={`${styles.skill}`}><SiHtml5 size={'60px'}/></li>
+          <li className={`${styles.skill}`}><SiCss3 size={'60px'}/></li>
+          <li className={`${styles.skill}`}><SiJavascript size={'60px'}/></li>
+          <li className={`${styles.skill}`}><SiReact size={'60px'}/></li>
+          <li className={`${styles.skill}`}><SiAdobeillustrator size={'60px'}/></li>
+          <li className={`${styles.skill}`}><SiAdobephotoshop size={'60px'}/></li>
         </ul>
       </div>
     </section>

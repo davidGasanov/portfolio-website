@@ -5,21 +5,22 @@ function Welcome() {
   return (
     <section className={styles.section}>
       <div className={`${styles.splitSection} ${styles.bgPrimary}`}>
-        <h1>Welcome</h1>
+        <div className={`${styles.nameDesc}`}>
+          <h1 className={`${styles.devName}`}>DAVID GASANOV</h1>
+          <h2 className={`${styles.devDesc}`}>WEB DESIGN AND DEVELOPMENT</h2>
+        </div>
+
         <p>My name is David Gasanov. I design and develop websites.</p>
-        <p>Below you will find some of my work and personal information.</p>
-        <p>
-          Should you have any inquiries or questions, feel free to contact me
-          via the provided channels on the “contact” page.{" "}
-        </p>
-        <hr className={`${styles.line}`}/>
+        <p>This is my website where i share my work and personal information. If you have any questions or requests, please feel free to contact me.</p>
+
+        <hr className={`${styles.line}`} />
       </div>
 
       <div className={`${styles.splitSection} ${styles.bgPattern}`}>
         <ul className={`${styles.pageNavigation}`}>
-          <li className={`${styles.largeText}`}>ABOUT</li>
-          <li className={`${styles.largeText}`}>WORK</li>
-          <li className={`${styles.largeText}`}>CONTACT</li>
+          <li className={`${styles.navButton}`}>ABOUT</li>
+          <li className={`${styles.navButton}`}>WORK</li>
+          <li className={`${styles.navButton}`}>CONTACT</li>
         </ul>
       </div>
     </section>

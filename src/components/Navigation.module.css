@@ -8,6 +8,7 @@
     justify-content: space-around;
     filter:drop-shadow(2px 2px 15px black);
     z-index: 1;
+    display: none;
 }
 
 .navList{
