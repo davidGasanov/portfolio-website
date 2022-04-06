@@ -1,7 +1,7 @@
 .container{
     box-sizing: border-box;
-    width: clamp(auto, 340px, 470px);
     max-width: 400px;
+    min-width: 280px;
     height: auto;  
     background-color: white;
     border-radius: 25px;
@@ -9,7 +9,8 @@
     gap: 10px;
     flex-direction: column;
     padding: 1rem;
-    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.322))
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.322));
+    margin-left: 10%;
 }
 
 .image{
@@ -53,7 +54,7 @@
 }
 
 .bgLight{
-    background-color: var(--primary-dark);
+    background-color: var(--secondary-dark);
 }
 
 .bgDark{

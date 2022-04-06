@@ -6,6 +6,7 @@
   border-top: 20px solid var(--primary-dark);
   background-color: var(--primary-bg);
   align-items: center;
+  justify-content: space-around;
   padding: 2rem;
 }
 
@@ -21,8 +22,9 @@
 .skillsContainer{
   width: 90%;
   max-width: 1600px;
-  display: flex;
-  justify-content: center;
+  display:flex;
+  overflow: hidden;
+
 }
 
 .mediumText{

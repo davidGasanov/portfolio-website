@@ -2,12 +2,11 @@ import React from "react";
 
 import styles from "./Projects.module.css";
 
-import pomodoro from "../imgs/pomoclock.PNG";
-import randomquote from "../imgs/randomquote.PNG";
-import rbform from "../imgs/rbform.PNG";
+import pomodoro from "../../imgs/pomoclock.PNG";
+import randomquote from "../../imgs/randomquote.PNG";
+import rbform from "../../imgs/rbform.PNG";
 
-import Skillcard from './Skillcard/index';
-
+import Skillcard from "../Skillcard";
 
 const projectList = [
   {
@@ -38,13 +37,15 @@ const projectList = [
 function Projects() {
   return (
     <section className={`${styles.section}`}>
-      <h1 className={`${styles.centered}`}>Some of my work</h1>
-      
-      <h2 className={`${styles.mediumText} ${styles.centered}`}>
-        Apps and websites which I developed
-      </h2>
+      <div>
+        <h1 className={`${styles.centered}`}>Some of my work</h1>
+        <h2 className={`${styles.mediumText} ${styles.centered}`}>
+          Apps and websites which I developed
+        </h2>
+      </div>
       <div className={`${styles.skillsContainer}`}>
-        <Skillcard {...projectList[0]}/>
+        <Skillcard {...projectList[0]} />
+        <Skillcard {...projectList[1]} />
       </div>
     </section>
   );
