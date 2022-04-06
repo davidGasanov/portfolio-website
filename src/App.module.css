@@ -1,56 +1,66 @@
 /* Global CSS rules */
 
-@font-face{
-    font-family: 'Helvetica';
-    src: url('./fonts/Helvetica.ttf');
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/Helvetica.ttf");
 }
 
-@font-face{
-    font-family: 'Helvetica';
-    src: url('./fonts/Helvetica-Bold.ttf');
-    font-weight: bold;
+@font-face {
+  font-family: "Helvetica";
+  src: url("./fonts/Helvetica-Bold.ttf");
+  font-weight: bold;
 }
 
-@font-face{
-    font-family: 'Garamond';
-    src: url('./fonts/Garamond Regular.ttf');
+@font-face {
+  font-family: "Garamond";
+  src: url("./fonts/Garamond Regular.ttf");
 }
 
-@font-face{
-    font-family: 'Garamond';
-    src: url('./fonts/Garamond.ttf');
-    font-weight: bold;
+@font-face {
+  font-family: "Garamond";
+  src: url("./fonts/Garamond.ttf");
+  font-weight: bold;
 }
 
 :root {
-    --primary-bg: #f2eeee;
-    --primary-dark: #19272A;
-    --secondary-dark: #506468;
-    --primary-light: #FE5448;
-
+  --primary-bg: #f2eeee;
+  --primary-dark: #19272a;
+  --secondary-dark: #506468;
+  --primary-light: #fe5448;
 }
 
-body,h1,h2,p,ul{
-    margin: 0;
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
 }
 
 h1 {
-    font-size: 32px;
-    margin-bottom: 3rem;
-    font-family: 'Abril Fatface';
+  font-size: 32px;
+  margin-bottom: 3rem;
+  font-family: "Abril Fatface";
 }
 
-p{
-    font-family: Helvetica;
-    max-width: 690px;
-    font-size: 16px;
-    margin-bottom: 1em;
+p {
+  font-family: Helvetica;
+  max-width: 690px;
+  font-size: 16px;
+  margin-bottom: 1em;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
+svg{
+    transition: width 0.2s ease-in-out, height 0.5s ease-in-out;
+}
 
-  
+svg:hover {
+  width: 80px;
+  height: 80px;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}

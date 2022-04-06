@@ -10,11 +10,10 @@ import rbform from "../../imgs/rbform.PNG";
 import Skillcard from "../Skillcard";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
-
 import { Pagination } from "swiper";
+
 
 const projectList = [
   {
@@ -54,7 +53,7 @@ function Projects() {
 
       <Swiper
         slidesPerView={"auto"}
-        spaceBetween={100}
+        spaceBetween={20}
         pagination={{ clickable: true }}
         modules={[Pagination]}
         className="mySwiper"
@@ -63,10 +62,10 @@ function Projects() {
           <Skillcard {...projectList[0]} />
         </SwiperSlide>
         <SwiperSlide>
-          <Skillcard {...projectList[0]} />
+          <Skillcard {...projectList[1]} />
         </SwiperSlide>
         <SwiperSlide>
-          <Skillcard {...projectList[0]} />
+          <Skillcard {...projectList[2]} />
         </SwiperSlide>
       </Swiper>
     </section>

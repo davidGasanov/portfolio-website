@@ -1,15 +1,14 @@
 import React from "react";
 import styles from "./Split-section.module.css";
-import {SiAdobeillustrator} from 'react-icons/si';
-import {SiAdobephotoshop} from 'react-icons/si';
-import {SiJavascript} from 'react-icons/si';
-import {SiCss3} from 'react-icons/si';
-import {SiHtml5} from 'react-icons/si';
-import {SiReact} from 'react-icons/si';
 
-
-
-
+import {
+  SiReact,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+} from "react-icons/si";
 
 function About() {
   return (
@@ -34,14 +33,28 @@ function About() {
       </div>
 
       <div className={`${styles.splitSection} ${styles.bgPattern}`}>
-        <h2 className={`${styles.largeText} ${styles.centered}`}>SKILL STACK</h2>
+        <h2 className={`${styles.largeText} ${styles.centered}`}>
+          SKILL STACK
+        </h2>
         <ul className={`${styles.skills}`}>
-          <li className={`${styles.skill}`}><SiHtml5 size={'60px'}/></li>
-          <li className={`${styles.skill}`}><SiCss3 size={'60px'}/></li>
-          <li className={`${styles.skill}`}><SiJavascript size={'60px'}/></li>
-          <li className={`${styles.skill}`}><SiReact size={'60px'}/></li>
-          <li className={`${styles.skill}`}><SiAdobeillustrator size={'60px'}/></li>
-          <li className={`${styles.skill}`}><SiAdobephotoshop size={'60px'}/></li>
+          <li className={`${styles.skill}`}>
+            <SiHtml5 size={"60px"} />
+          </li>
+          <li className={`${styles.skill}`}>
+            <SiCss3 size={"60px"} />
+          </li>
+          <li className={`${styles.skill}`}>
+            <SiJavascript size={"60px"} />
+          </li>
+          <li className={`${styles.skill}`}>
+            <SiReact size={"60px"} />
+          </li>
+          <li className={`${styles.skill}`}>
+            <SiAdobeillustrator size={"60px"} />
+          </li>
+          <li className={`${styles.skill}`}>
+            <SiAdobephotoshop size={"60px"} />
+          </li>
         </ul>
       </div>
     </section>

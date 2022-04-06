@@ -1,11 +1,18 @@
-
-.swiper{
+.swiper {
   width: auto;
   max-width: 100%;
+  min-height: 650px;
 }
 
-  
-  .swiper-slide{
-    max-width: 380px;
-    height: auto;
-  }
+.swiper-wrapper {
+  box-sizing: border-box;
+
+}
+
+.swiper-slide {
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 380px;
+  min-width: 320px !important;
+  height: auto;
+}

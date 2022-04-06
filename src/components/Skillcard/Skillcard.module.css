@@ -13,8 +13,10 @@
 }
 
 .image{
-    width: 80%;
+    width: auto;
     align-self: center;
+    max-height: 200px;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.26))
 
 }
 
@@ -24,20 +26,24 @@
 }
 
 .title{
+
     width: 100%;
     font-family: 'Helvetica';
-    font-size: clamp(30px, 6vw, 35px);
+    font-size: 30px;
     color: var(--secondary-dark);
-    margin: 0;
+    margin-top: 10px;
     font-weight: bold;
+    text-align: center;
 
 }
 
 .description{
+    text-align: center;
     font-family: 'Helvetica';
     font-weight: normal;
     font-size: 20px;
     color: var(--secondary-dark);
+    min-height: 70px;
 }
 
 .button{
