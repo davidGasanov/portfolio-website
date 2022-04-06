@@ -1,12 +1,20 @@
 import React from "react";
 
 import styles from "./Projects.module.css";
+import "../swiper-styles.css";
 
 import pomodoro from "../../imgs/pomoclock.PNG";
 import randomquote from "../../imgs/randomquote.PNG";
 import rbform from "../../imgs/rbform.PNG";
 
 import Skillcard from "../Skillcard";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Pagination } from "swiper";
 
 const projectList = [
   {
@@ -43,10 +51,24 @@ function Projects() {
           Apps and websites which I developed
         </h2>
       </div>
-      <div className={`${styles.skillsContainer}`}>
-        <Skillcard {...projectList[0]} />
-        <Skillcard {...projectList[1]} />
-      </div>
+
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={100}
+        pagination={{ clickable: true }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <Skillcard {...projectList[0]} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Skillcard {...projectList[0]} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Skillcard {...projectList[0]} />
+        </SwiperSlide>
+      </Swiper>
     </section>
   );
 }

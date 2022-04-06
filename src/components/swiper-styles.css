@@ -1,0 +1,10 @@
+
+.swiper{
+  width: 100%;
+}
+
+  
+  .swiper-slide{
+    max-width: 380px;
+    height: auto;
+  }

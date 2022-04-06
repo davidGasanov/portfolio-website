@@ -10,7 +10,6 @@
     flex-direction: column;
     padding: 1rem;
     filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.322));
-    margin-left: 10%;
 }
 
 .image{
