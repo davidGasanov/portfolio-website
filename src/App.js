@@ -1,20 +1,33 @@
 import styles from "./App.module.css";
 
-import Navigation from "./components/Navigation";
+import { useState, useEffect } from "react";
+
+import Navigation from "./components/Navigation/Navigation";
 import Welcome from "./components/Welcome";
 import About from "./components/About";
 import Projects from "./components/Projects";
-
-import Contact from "./components/Contact"
+import Phonemenu from "./components/Navigation/Phonemenu";
+import Contact from "./components/Contact";
 
 function App() {
+  const [scrolled, setScrolled] = useState(false);
+  const [phoneMenu, togglePhoneMenu] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () => {
+        setScrolled(window.pageYOffset > 200);
+      });
+    }
+  }, []);
+
   return (
     <div className="App">
-      <Navigation />
-      <Welcome/>
-      <About/>
-      <Projects/>
-      <Contact/>
+      {phoneMenu ? <Phonemenu togglePhoneMenu={togglePhoneMenu} /> : <Navigation togglePhoneMenu={togglePhoneMenu} scrolled={scrolled} />}
+      <Welcome />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 
 function index() {
   return (
-    <section className={`${styles.section}`}>
+    <section id="contact" className={`${styles.section}`}>
       <div>
         <h1 className={`${styles.title}`}>CONTACT ME</h1>
         <h2 className={`${styles.subtitle}`}>
@@ -16,19 +16,31 @@ function index() {
       </div>
       <ul className={`${styles.links}`}>
         <li className={`${styles.link}`}>
-          <a>
-            <MdEmail size={70} />
+          <a target="_blank" href="mailto:davit.gasanov@protonmail.com">
+            <MdEmail className={styles.contactIcon} size={70} />
           </a>
+          <span className={styles.contactInfo}>
+            davit.gasanov@protonmail.com
+          </span>
         </li>
         <li className={`${styles.link}`}>
-          <a>
-            <BsGithub size={70} />
+          <a target="_blank" href="https://github.com/davidGasanov/">
+            <BsGithub className={styles.contactIcon} size={70} />
           </a>
+          <span className={styles.contactInfo}>
+            https://github.com/davidGasanov/
+          </span>
         </li>
         <li className={`${styles.link}`}>
-          <a>
-            <BsLinkedin size={70} />
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/davit-gasanov-5265b2228/"
+          >
+            <BsLinkedin className={styles.contactIcon} size={70} />
           </a>
+          <span className={styles.contactInfo}>
+            https://www.linkedin.com/in/davit-gasanov-5265b2228/
+          </span>
         </li>
       </ul>
       <a className={`${styles.downLink}`}>

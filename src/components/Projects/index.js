@@ -18,7 +18,7 @@ import { Pagination } from "swiper";
 const projectList = [
   {
     title: "Pomodoro timer",
-    description: 'A timer app inspired by the famous "pomodoro technique"',
+    description: 'A timer app for productivity. Inspired by the famous "pomodoro technique"',
     image: pomodoro,
     githubUrl: "https://github.com/davidGasanov/Pomodoro-clock",
     liveUrl: "https://pomoclockdg.netlify.app/",
@@ -26,7 +26,7 @@ const projectList = [
   {
     title: "Random quote app",
     description:
-      "A small but elegant app which generates an inspirational quote upon clicking",
+      "A small but elegant app which generates inspirational quotes upon clicking",
     image: randomquote,
     githubUrl: "https://github.com/davidGasanov/random-quote-machine",
     liveUrl: "https://randomquotedg.netlify.app/",
@@ -34,7 +34,7 @@ const projectList = [
   {
     title: "Redberry form",
     description:
-      "A small but elegant app which generates an inspirational quote upon clicking",
+      "A responsive form with validation, made for the Redberry bootcamp project. Disclaimer: does not actually submit data to an API.",
     image: rbform,
     githubUrl: "https://github.com/davidGasanov/redberry-form-responsive",
     liveUrl: "https://redberry-form-showcase.netlify.app/",
@@ -43,7 +43,7 @@ const projectList = [
 
 function Projects() {
   return (
-    <section className={`${styles.section}`}>
+    <section id="projects" className={`${styles.section}`}>
       <div>
         <h1 className={`${styles.centered}`}>Some of my work</h1>
         <h2 className={`${styles.mediumText} ${styles.centered}`}>

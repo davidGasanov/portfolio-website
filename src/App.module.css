@@ -37,6 +37,10 @@ ul {
   margin: 0;
 }
 
+a{
+  color: inherit;
+}
+
 h1 {
   font-size: 32px;
   margin-bottom: 3rem;
@@ -55,12 +59,4 @@ ul {
   padding: 0;
 }
 
-svg{
-    transition: width 0.2s ease-in-out, height 0.5s ease-in-out;
-}
 
-svg:hover {
-  width: 80px;
-  height: 80px;
-  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
-}

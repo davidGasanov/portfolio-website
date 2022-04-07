@@ -12,7 +12,7 @@ import {
 
 function About() {
   return (
-    <section className={`${styles.section} ${styles.sectionReverse}`}>
+    <section id="about" className={`${styles.section} ${styles.sectionReverse}`}>
       <div className={`${styles.splitSection} ${styles.bgPrimary}`}>
         <h1>A little bit about me</h1>
         <p>

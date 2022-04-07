@@ -5,7 +5,7 @@ import styles from "./Split-section.module.css";
 
 function Welcome() {
   return (
-    <section className={styles.section}>
+    <section id="home" className={styles.section}>
       <div className={`${styles.splitSection} ${styles.bgPrimary}`}>
         <div className={`${styles.nameDesc}`}>
           <h1 className={`${styles.devName}`}>DAVID GASANOV</h1>
