@@ -8,7 +8,13 @@
   justify-content: flex-start;
   z-index: 2;
   display: flex;
-  transition: height 0.5s ease-in-out;
+  top: 0;
+  transition: height 0.5s ease-in-out, top 0.5s ease-in-out;
+}
+
+.navigation[scrolled="false"][invisible="true"], nav[scrolled="true"][invisible="true"] {
+  top: -100%;
+  transition: top 0.5s ease-in-out;
 }
 
 nav[scrolled="true"] {
@@ -16,6 +22,7 @@ nav[scrolled="true"] {
   color: white;
   width: 100%;
   position: fixed;
+  top: 0;
   height: 60px;
   display: flex;
   align-items: center;
@@ -24,10 +31,11 @@ nav[scrolled="true"] {
   z-index: 2;
   display: flex;
   transition: height 0.5s ease-in-out, color 0.5s ease-in-out,
-    background-color 0.5s ease-in-out;
+    background-color 0.5s ease-in-out, top 0.3s ease-in;
 }
 
-.navLink:hover {
+.navLink:hover,
+.closePhoneMenu svg:hover {
   cursor: pointer;
 }
 
@@ -42,9 +50,20 @@ nav[scrolled="true"] {
   margin: 20px;
 }
 
+.closePhoneMenu {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.closePhoneMenu svg {
+  margin: 20px;
+}
+
 .phoneMenuToggler:hover {
   cursor: pointer;
 }
+
 
 .phoneMenu {
   position: fixed;
@@ -53,23 +72,35 @@ nav[scrolled="true"] {
   left: 0;
   width: 60%;
   height: 100vh;
-  background: rgb(25,39,42);
+  background: rgb(25, 39, 42);
+  background: linear-gradient(
+    94deg,
+    rgba(25, 39, 42, 1) 0%,
+    rgba(38, 55, 46, 1) 100%
+  );
   color: white;
+  transition: left 0.5s ease-in-out, top 0.5s ease-in-out;
 }
+
+.phoneMenu[visible="false"] {
+  top: 0;
+  left: -100%;
+  transition: left 0.5s ease-in-out, top 0.5s ease-in-out;
+}
+
 
 .mobileNavList {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-self: center;
-  min-height: 200px;
+  min-height: 300px;
   width: 100%;
   align-items: center;
 }
 
 .mobileNavList .navLink {
-
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: Helvetica;
   text-align: center;
   color: white;
@@ -90,6 +121,10 @@ nav[scrolled="true"] {
   .navigation {
     height: 100px;
     transition: height 0.5s ease-in-out;
+  }
+
+  .phoneMenuToggler {
+    display: none;
   }
 
   .phoneMenu {

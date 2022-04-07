@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      {phoneMenu ? <Phonemenu togglePhoneMenu={togglePhoneMenu} /> : <Navigation togglePhoneMenu={togglePhoneMenu} scrolled={scrolled} />}
+      <Navigation phoneMenu={phoneMenu} togglePhoneMenu={togglePhoneMenu} scrolled={scrolled} />
       <Welcome />
       <About />
       <Projects />

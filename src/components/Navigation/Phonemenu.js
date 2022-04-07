@@ -1,14 +1,21 @@
-import React from 'react'
+import React from "react";
 
 import Link from "react-scroll/modules/components/Link";
 
 import styles from "./Navigation.module.css";
 
-function Phonemenu() {
+import { MdOutlineClose } from "react-icons/md";
+
+function Phonemenu({togglePhoneMenu, phoneMenu}) {
+
+    console.log("PHONEMENU STATUS: " + phoneMenu)
   return (
-    <nav className={styles.phoneMenu}>
-        
-        <ul className={styles.mobileNavList}>
+    <nav  className={styles.phoneMenu} visible={phoneMenu.toString()}>
+      <div className={styles.closePhoneMenu}>
+        <MdOutlineClose  onClick={()=>{togglePhoneMenu(false)}} size={30} />
+      </div>
+
+      <ul className={styles.mobileNavList}>
         <li className={styles.navLink}>
           <Link smooth={true} duration={1000} to="home">
             Home
@@ -31,7 +38,7 @@ function Phonemenu() {
         </li>
       </ul>
     </nav>
-  )
+  );
 }
 
-export default Phonemenu
+export default Phonemenu;
