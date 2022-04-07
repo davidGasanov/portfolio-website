@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Split-section.module.css";
 import Link from "react-scroll/modules/components/Link";
 
-
 function Welcome() {
   return (
     <section id="home" className={styles.section}>
@@ -13,16 +12,25 @@ function Welcome() {
         </div>
 
         <p>My name is David Gasanov, I am a front-end web developer.</p>
-        <p>This is my website where i share my work and personal information. If you have any questions or requests, please feel free to contact me</p>
+        <p>
+          This is my website where i share my work and personal information. If
+          you have any questions or requests, please feel free to contact me
+        </p>
 
         <hr className={`${styles.line}`} />
       </div>
 
       <div className={`${styles.splitSection} ${styles.bgPattern}`}>
         <ul className={`${styles.pageNavigation}`}>
-          <li className={`${styles.navButton}`}><Link smooth={true} duration={1000} to="about">ABOUT</Link></li>
-          <li className={`${styles.navButton}`}><Link smooth={true} duration={1000} to="projects">WORK</Link></li>
-          <li className={`${styles.navButton}`}><Link smooth={true} duration={1000} to="contact">CONTACT</Link></li>
+          <Link smooth={true} duration={1000} to="about">
+            <li className={`${styles.navButton}`}>ABOUT</li>
+          </Link>
+          <Link smooth={true} duration={1000} to="projects">
+            <li className={`${styles.navButton}`}>WORK</li>
+          </Link>
+          <Link smooth={true} duration={1000} to="contact">
+            <li className={`${styles.navButton}`}>CONTACT</li>
+          </Link>
         </ul>
       </div>
     </section>

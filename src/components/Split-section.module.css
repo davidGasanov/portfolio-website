@@ -49,15 +49,30 @@
   font-size: 1.7rem;
   font-family: "Helvetica";
   min-width: 15rem;
+  color: white;
+  border: 2px solid white;
+  background-color: none;
+  padding: 1rem;
+  text-align: center;
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.navButton:hover {
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-family: "Helvetica";
+  min-width: 15rem;
   color: var(--primary-dark);
   background-color: white;
   padding: 1rem;
   text-align: center;
+  border: 3px solid var(--secondary-dark);
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 .pageNavigation {
   height: 100%;
-  max-height: 320px;
+  max-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
