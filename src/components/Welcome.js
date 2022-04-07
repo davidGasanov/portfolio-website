@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Split-section.module.css";
-
+import Link from "react-scroll/modules/components/Link";
 
 
 function Welcome() {
@@ -20,9 +20,9 @@ function Welcome() {
 
       <div className={`${styles.splitSection} ${styles.bgPattern}`}>
         <ul className={`${styles.pageNavigation}`}>
-          <li className={`${styles.navButton}`}>ABOUT</li>
-          <li className={`${styles.navButton}`}>WORK</li>
-          <li className={`${styles.navButton}`}>CONTACT</li>
+          <li className={`${styles.navButton}`}><Link smooth={true} duration={1000} to="about">ABOUT</Link></li>
+          <li className={`${styles.navButton}`}><Link smooth={true} duration={1000} to="projects">WORK</Link></li>
+          <li className={`${styles.navButton}`}><Link smooth={true} duration={1000} to="contact">CONTACT</Link></li>
         </ul>
       </div>
     </section>
