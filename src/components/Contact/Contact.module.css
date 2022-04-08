@@ -78,7 +78,7 @@
 }
 
 .contactIcon:hover {
-  color: var(--secondary-dark);
+  color: var(--primary-dark);
   position: relative;
   width: 85px;
   height: 85px;
