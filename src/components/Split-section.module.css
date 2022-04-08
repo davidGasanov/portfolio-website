@@ -37,7 +37,7 @@
   font-size: 40px;
   line-height: 2rem;
   margin: 0;
-  font-family: "Abril Fatface";
+  font-family: "Abril Fatface", serif;
 }
 
 .devDesc {
@@ -206,7 +206,7 @@
 
   .sectionTitle {
     font-size: 40px;
-    font-family: "Abril Fatface";
+    font-family: "Abril Fatface", serif;
   }
 
   p {
