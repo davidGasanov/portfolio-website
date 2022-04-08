@@ -12,9 +12,8 @@
   transition: height 0.5s ease-in-out, top 0.5s ease-in-out;
 }
 
-
-
-.navigation[scrolled="false"][invisible="true"], nav[scrolled="true"][invisible="true"] {
+.navigation[scrolled="false"][invisible="true"],
+nav[scrolled="true"][invisible="true"] {
   top: -100%;
   transition: top 0.5s ease-in-out;
 }
@@ -67,6 +66,23 @@
   cursor: pointer;
 }
 
+.logo {
+  max-width: 70px;
+  width: 15%;
+  filter: drop-shadow(3px 3px 3px rgba(32, 31, 31, 0.39));
+  margin-bottom: 50px;
+}
+
+.logoDesktop{
+  max-width: 30px;
+  margin-right: 30px;
+}
+
+.logo path, .logoDesktop path{
+  fill: white;
+}
+
+
 
 .phoneMenu {
   position: fixed;
@@ -76,7 +92,6 @@
   width: 60%;
   height: 100vh;
   background: rgba(25, 39, 42, 0.952);
-
   color: white;
   transition: left 0.5s ease-in-out, top 0.5s ease-in-out;
 }
@@ -86,7 +101,6 @@
   left: -100%;
   transition: left 0.5s ease-in-out, top 0.5s ease-in-out;
 }
-
 
 .mobileNavList {
   display: flex;
@@ -106,13 +120,11 @@
   color: white;
   width: 90%;
   min-height: 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.342); 
-
+  border-bottom: 1px solid rgba(255, 255, 255, 0.342);
 }
 
 @media screen and (min-width: 760px) {
-
-  .navigation[scrolled="false"] .desktopNavList{
+  .navigation[scrolled="false"] .desktopNavList {
     position: relative;
     opacity: 0;
     top: -100%;

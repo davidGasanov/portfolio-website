@@ -2,14 +2,21 @@ import React from "react";
 import styles from "./Split-section.module.css";
 import Link from "react-scroll/modules/components/Link";
 
+import { ReactComponent as Logocolor } from "../imgs/logo_color.svg";
+
 function Welcome() {
   return (
     <section id="home" className={styles.section}>
       <div className={`${styles.splitSection} ${styles.bgPrimary}`}>
         <div data-aos="fade-right">
           <div className={`${styles.nameDesc}`}>
-            <h1 className={`${styles.devName}`}>DAVID GASANOV</h1>
-            <h2 className={`${styles.devDesc}`}>Web design and development.</h2>
+            <Logocolor className={styles.logo}/>
+            <div>
+              <h1 className={`${styles.devName}`}>DAVID GASANOV</h1>
+              <h2 className={`${styles.devDesc}`}>
+                Web design and development.
+              </h2>
+            </div>
           </div>
 
           <p>My name is David Gasanov, I am a front-end web developer.</p>

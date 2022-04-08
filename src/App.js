@@ -11,6 +11,8 @@ import Contact from "./components/Contact";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+
+
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [phoneMenu, togglePhoneMenu] = useState(false);
