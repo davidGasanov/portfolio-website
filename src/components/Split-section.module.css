@@ -4,6 +4,7 @@
   flex-direction: column;
   box-sizing: border-box;
   border-bottom: 20px solid var(--primary-dark);
+  overflow: hidden;
 }
 
 .splitSection {
@@ -29,6 +30,7 @@
   font-size: 20px;
   font-family: Helvetica;
   font-weight: normal;
+  color: rgb(68, 67, 67);
 }
 
 .bgPattern {
@@ -54,7 +56,8 @@
   background-color: none;
   padding: 1rem;
   text-align: center;
-  transition: color 0.5s ease-in-out, border 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out,
+    background-color 0.5s ease-in-out;
 }
 
 .navButton:hover {
@@ -67,7 +70,8 @@
   padding: 1rem;
   text-align: center;
   border: 3px solid var(--secondary-dark);
-  transition: color 0.5s ease-in-out, border 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out,
+    background-color 0.5s ease-in-out;
 }
 
 .pageNavigation {
@@ -85,7 +89,7 @@
   background-color: var(--primary-light);
   position: relative;
   top: clamp(5%, 7%, 10%);
-  left: -1rem;
+  left: -20%;
   width: 50%;
   max-width: 500px;
   margin: 0;
@@ -93,7 +97,7 @@
 }
 
 .lineRight {
-  left: 1rem;
+  left: 20%;
   align-self: flex-end;
 }
 .centered {
@@ -110,13 +114,14 @@
 }
 
 .skill {
-  width: auto;
+
   text-align: center;
 }
 
 .largeText {
   font-size: 3rem;
   font-family: Helvetica;
+  border-bottom: 1px solid white;
 }
 
 @media (min-width: 800px) {
@@ -126,7 +131,58 @@
     flex-direction: row;
   }
 
+
+  .splitSection {
+    padding: 5%;
+  }
+
+  .bgPattern{
+    padding: 1rem;
+  }
+
+
   .sectionReverse {
     flex-direction: row-reverse;
+  }
+
+  .skills{
+    min-height: 300px;
+  }
+
+}
+
+/* Large screens */
+
+@media (min-width: 1330px) {
+  .section {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .splitSection {
+    padding: 5%;
+  }
+
+  .sectionReverse {
+    flex-direction: row-reverse;
+  }
+
+  .devName {
+    font-size: 50px;
+  }
+
+  .devDesc {
+    font-size: 25px;
+  }
+
+  .sectionTitle {
+    font-size: 40px;
+    font-family: "Abril Fatface";
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 25px;
   }
 }

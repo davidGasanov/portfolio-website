@@ -6,22 +6,32 @@ function Welcome() {
   return (
     <section id="home" className={styles.section}>
       <div className={`${styles.splitSection} ${styles.bgPrimary}`}>
-        <div className={`${styles.nameDesc}`}>
-          <h1 className={`${styles.devName}`}>DAVID GASANOV</h1>
-          <h2 className={`${styles.devDesc}`}>WEB DESIGN AND DEVELOPMENT</h2>
+        <div data-aos="fade-right">
+          <div className={`${styles.nameDesc}`}>
+            <h1 className={`${styles.devName}`}>DAVID GASANOV</h1>
+            <h2 className={`${styles.devDesc}`}>Web design and development.</h2>
+          </div>
+
+          <p>My name is David Gasanov, I am a front-end web developer.</p>
+          <p>
+            This is my website where i share my work and personal information.
+            If you have any questions or requests, please feel free to contact
+            me
+          </p>
         </div>
-
-        <p>My name is David Gasanov, I am a front-end web developer.</p>
-        <p>
-          This is my website where i share my work and personal information. If
-          you have any questions or requests, please feel free to contact me
-        </p>
-
-        <hr className={`${styles.line}`} />
+        <hr
+          data-aos-duration="2500"
+          data-aos="slide-right"
+          className={`${styles.line}`}
+        />
       </div>
 
       <div className={`${styles.splitSection} ${styles.bgPattern}`}>
-        <ul className={`${styles.pageNavigation}`}>
+        <ul
+          data-aos-delay="500"
+          data-aos="fade-left"
+          className={`${styles.pageNavigation}`}
+        >
           <Link smooth={true} duration={1000} to="about">
             <li className={`${styles.navButton}`}>ABOUT</li>
           </Link>

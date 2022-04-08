@@ -8,13 +8,13 @@ import { MdEmail } from "react-icons/md";
 function index() {
   return (
     <section id="contact" className={`${styles.section}`}>
-      <div>
+      <div data-aos="slide-down">
         <h1 className={`${styles.title}`}>CONTACT ME</h1>
         <h2 className={`${styles.subtitle}`}>
           I am looking forward to working on amazing projects with you!
         </h2>
       </div>
-      <ul className={`${styles.links}`}>
+      <ul data-aos="zoom-in" className={`${styles.links}`}>
         <li className={`${styles.link}`}>
           <a target="_blank" href="mailto:davit.gasanov@protonmail.com">
             <MdEmail className={styles.contactIcon} size={70} />
@@ -43,7 +43,7 @@ function index() {
           </span>
         </li>
       </ul>
-      <a className={`${styles.downLink}`}>
+      <a data-aos="zoom-in" className={`${styles.downLink}`}>
         <u>Download my CV</u>
       </a>
     </section>

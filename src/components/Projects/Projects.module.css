@@ -26,3 +26,11 @@
   font-family: Helvetica;
   font-weight: normal;
 }
+
+@media screen and (min-width: 1330px ){
+  .largeText{
+    font-size: 40px;
+    font-family:"Abril Fatface";
+  }
+
+}

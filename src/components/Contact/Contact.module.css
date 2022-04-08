@@ -5,7 +5,8 @@
   flex-direction: column;
   box-sizing: border-box;
   border-top: 20px solid var(--primary-dark);
-  background-color: var(--primary-light);
+  background:linear-gradient(0deg, rgba(254, 84, 72, 0.3), rgba(254, 84, 72, 0.3)), url(../../imgs/mt_background.jpg);
+  background-size:cover;
   color: white;
   align-items: center;
   justify-content: space-around;

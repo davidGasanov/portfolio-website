@@ -14,11 +14,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
-
 const projectList = [
   {
     title: "Pomodoro timer",
-    description: 'A timer app for productivity. Inspired by the famous "pomodoro technique"',
+    description:
+      'A timer app for productivity. Inspired by the famous "pomodoro technique"',
     image: pomodoro,
     githubUrl: "https://github.com/davidGasanov/Pomodoro-clock",
     liveUrl: "https://pomoclockdg.netlify.app/",
@@ -44,8 +44,10 @@ const projectList = [
 function Projects() {
   return (
     <section id="projects" className={`${styles.section}`}>
-      <div>
-        <h1 className={`${styles.centered}`}>Some of my work</h1>
+      <div data-aos="fade-down">
+        <h1 className={`${styles.centered} ${styles.largeText}`}>
+          Some of my work
+        </h1>
         <h2 className={`${styles.mediumText} ${styles.centered}`}>
           Apps and websites which I developed
         </h2>
@@ -57,16 +59,13 @@ function Projects() {
         pagination={{ clickable: true }}
         modules={[Pagination]}
         className="mySwiper"
+        data-aos="fade-up"
       >
-        <SwiperSlide>
-          <Skillcard {...projectList[0]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Skillcard {...projectList[1]} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Skillcard {...projectList[2]} />
-        </SwiperSlide>
+        {projectList.map((project) => (
+          <SwiperSlide>
+            <Skillcard {...project} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );
