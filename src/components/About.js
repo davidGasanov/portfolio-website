@@ -52,22 +52,25 @@ function About() {
         </h2>
         <ul data-aos="slide-up" className={`${styles.skills}`}>
           <li className={`${styles.skill}`}>
-            <SiHtml5 size={"60px"} />
+            <SiHtml5 className={`${styles.skillSvg}`} size={"60px"} />
           </li>
           <li className={`${styles.skill}`}>
-            <SiCss3 size={"60px"} />
+            <SiCss3 className={`${styles.skillSvg}`} size={"60px"} />
           </li>
           <li className={`${styles.skill}`}>
-            <SiJavascript size={"60px"} />
+            <SiJavascript className={`${styles.skillSvg}`} size={"60px"} />
           </li>
           <li className={`${styles.skill}`}>
-            <SiReact size={"60px"} />
+            <SiReact className={`${styles.skillSvg}`} size={"60px"} />
           </li>
           <li className={`${styles.skill}`}>
-            <SiAdobeillustrator size={"60px"} />
+            <SiAdobeillustrator
+              className={`${styles.skillSvg}`}
+              size={"60px"}
+            />
           </li>
           <li className={`${styles.skill}`}>
-            <SiAdobephotoshop size={"60px"} />
+            <SiAdobephotoshop className={`${styles.skillSvg}`} size={"60px"} />
           </li>
         </ul>
       </div>
