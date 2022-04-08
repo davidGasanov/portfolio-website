@@ -28,7 +28,7 @@
 .title{
 
     width: 100%;
-    font-family: 'Helvetica';
+    font-family: "Helvetica", sans-serif;
     font-size: 30px;
     color: var(--secondary-dark);
     margin-top: 10px;
@@ -39,7 +39,7 @@
 
 .description{
     text-align: center;
-    font-family: 'Helvetica';
+    font-family: "Helvetica", sans-serif;
     font-weight: normal;
     font-size: 20px;
     color: var(--secondary-dark);
@@ -52,7 +52,7 @@
     border-radius: 15px;
     display: flex;
     justify-content: center;
-    font-family: 'Helvetica';
+    font-family: "Helvetica", sans-serif;
     text-decoration: none;
     color: white;
     font-size: 20px;

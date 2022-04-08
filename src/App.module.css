@@ -11,16 +11,6 @@
   font-weight: bold;
 }
 
-@font-face {
-  font-family: "Garamond";
-  src: url("./fonts/Garamond Regular.ttf");
-}
-
-@font-face {
-  font-family: "Garamond";
-  src: url("./fonts/Garamond.ttf");
-  font-weight: bold;
-}
 
 :root {
   --primary-bg: #f2eeee;
@@ -44,7 +34,7 @@ a{
 h1 {
   font-size: 32px;
   margin-bottom: 3rem;
-  font-family: "Abril Fatface";
+  font-family: "Abril Fatface", serif;
 }
 
 p {

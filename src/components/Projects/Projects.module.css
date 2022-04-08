@@ -29,7 +29,7 @@
 @media screen and (min-width: 1330px ){
   .largeText{
     font-size: 40px;
-    font-family:"Abril Fatface";
+    font-family:"Abril Fatface", serif;
   }
 
 }
