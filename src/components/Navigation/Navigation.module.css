@@ -144,6 +144,12 @@ nav[scrolled="true"][invisible="true"] {
   .navigation {
     height: 50px;
     transition: height 0.5s ease-in-out;
+    justify-content: center;
+  }
+
+  
+  .navigation[scrolled="true"] {
+    justify-content: center;
   }
 
   .phoneMenuToggler {

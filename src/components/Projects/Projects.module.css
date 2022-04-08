@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  border-top: 20px solid var(--primary-dark);
   background-color: var(--primary-bg);
   align-items: center;
   justify-content: space-around;

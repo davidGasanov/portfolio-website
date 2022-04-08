@@ -43,7 +43,7 @@
     font-weight: normal;
     font-size: 20px;
     color: var(--secondary-dark);
-    min-height: 70px;
+    min-height: 100px;
 }
 
 .button{

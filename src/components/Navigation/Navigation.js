@@ -22,8 +22,9 @@ const index = ({ scrolled, togglePhoneMenu, phoneMenu }) => {
           className={styles.phoneMenuToggler}
           size={30}
         />
+        
         <ul visible={!phoneMenu.toString()} className={styles.desktopNavList}>
-          <LogoOutline className={styles.logoDesktop} />
+        <LogoOutline className={styles.logoDesktop} />
           <li className={styles.navLink}>
             <Link smooth={true} duration={1000} to="home">
               Home
