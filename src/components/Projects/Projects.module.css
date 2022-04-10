@@ -7,7 +7,7 @@
   background-color: var(--primary-bg);
   align-items: center;
   justify-content: space-around;
-  padding: 2rem;
+  padding: clamp(2vw, 2rem, 20px);
 }
 
 .bgPrimary {
@@ -24,6 +24,10 @@
   font-size: 20px;
   font-family: Helvetica;
   font-weight: normal;
+}
+
+.swiperSlide{
+  padding: 0;
 }
 
 @media screen and (min-width: 1330px ){

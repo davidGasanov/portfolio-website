@@ -8,7 +8,7 @@ import { MdEmail } from "react-icons/md";
 function index() {
   return (
     <section id="contact" className={`${styles.section}`}>
-      <div data-aos="slide-down">
+      <div data-aos="fade-down">
         <h1 className={`${styles.title}`}>CONTACT ME</h1>
         <h2 className={`${styles.subtitle}`}>
           I am looking forward to working on amazing projects with you!
@@ -43,7 +43,7 @@ function index() {
           </span>
         </li>
       </ul>
-      <a data-aos="zoom-in" className={`${styles.downLink}`}>
+      <a className={`${styles.downLink}`}>
         <u>Download my CV</u>
       </a>
     </section>
