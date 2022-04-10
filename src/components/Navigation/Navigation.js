@@ -4,11 +4,20 @@ import Phonemenu from "./Phonemenu";
 import { IoMenuOutline } from "react-icons/io5";
 import Link from "react-scroll/modules/components/Link";
 import { ReactComponent as LogoOutline } from "../../imgs/logo_outline.svg";
+import { useDetectClickOutside } from "react-detect-click-outside";
 
-const index = ({ scrolled, togglePhoneMenu, phoneMenu }) => {
+
+const Navigation = ({ scrolled, togglePhoneMenu, phoneMenu }) => {
   console.log("scrolled status: " + scrolled);
+
+  const handleClickOutside = () =>{
+    togglePhoneMenu(false);
+  }
+
+  const ref = useDetectClickOutside({onTriggered: handleClickOutside })
+
   return (
-    <>
+    <div ref={ref}>
       <Phonemenu togglePhoneMenu={togglePhoneMenu} phoneMenu={phoneMenu} />
       <nav
         invisible={phoneMenu.toString()}
@@ -17,14 +26,15 @@ const index = ({ scrolled, togglePhoneMenu, phoneMenu }) => {
       >
         <IoMenuOutline
           onClick={() => {
+            console.log("Togglephonemenu fired");
             togglePhoneMenu(true);
           }}
           className={styles.phoneMenuToggler}
           size={30}
         />
-        
+
         <ul visible={!phoneMenu.toString()} className={styles.desktopNavList}>
-        <LogoOutline className={styles.logoDesktop} />
+          <LogoOutline className={styles.logoDesktop} />
           <li className={styles.navLink}>
             <Link smooth={true} duration={1000} to="home">
               Home
@@ -47,8 +57,8 @@ const index = ({ scrolled, togglePhoneMenu, phoneMenu }) => {
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
 
-export default index;
+export default Navigation;

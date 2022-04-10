@@ -60,7 +60,8 @@
     url("../imgs/background.png");
   background-size: cover;
   display: flex;
-  min-height: 40vh;
+  height: 40vh;
+  min-height: 300px;
   box-sizing: border-box;
   align-items: center;
   justify-content: space-around;
@@ -139,7 +140,9 @@
 }
 
 .skill {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .largeText {
@@ -152,6 +155,11 @@
 /* medium screens */
 
 @media (min-width: 800px) {
+
+  .largeText{
+    margin-bottom: 30px;
+  }
+
   .nameDesc {
     flex-direction: row;
   }
@@ -173,6 +181,13 @@
   .bgPattern {
     padding: 1rem;
     flex-basis: 40%;
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .bgPrimary{
+    justify-content: center;
+    gap: 40px;
   }
 
   .sectionReverse {
@@ -180,8 +195,9 @@
   }
 
   .skills {
-    max-height: 400px;
+    max-height: 250px;
   }
+
 }
 
 /* Large screens */

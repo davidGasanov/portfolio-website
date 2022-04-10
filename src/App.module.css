@@ -11,6 +11,10 @@
   font-weight: bold;
 }
 
+section{
+  overflow: hidden;
+}
+
 :root {
   --primary-bg: #f2eeee;
   --primary-dark: #19272a;
