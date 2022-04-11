@@ -43,7 +43,7 @@ function index() {
           </span>
         </li>
       </ul>
-      <a className={`${styles.downLink}`}>
+      <a href="../documents/portfolio_eng.pdf" download className={`${styles.downLink}`}>
         <u>Download my CV</u>
       </a>
     </section>
