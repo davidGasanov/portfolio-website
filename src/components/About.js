@@ -26,14 +26,12 @@ function About() {
           <p>
             In the middle of 2021, I began teaching myself the basics of graphic
             design and web development. I believe that learning is a constant
-            process, so I put in a lot of effort every day to become a better
-            developer.{" "}
+            process, so I put a lot of effort into growing my skills every day.{" "}
           </p>
           <p>
-            Currently, I specialize in using React to create fast and responsive
-            websites and web apps. I use Adobe Photoshop, Illustrator and Figma
-            to create the designs and layouts. Afterwards, I write the code and
-            bring the website to life.
+            I use Adobe Illustrator or Figma to create the initial
+            designs and layouts of my websites. Afterwards, I write the code in
+            react and bring them to life.
           </p>
         </div>
         <hr

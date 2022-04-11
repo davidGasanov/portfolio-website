@@ -19,7 +19,7 @@ function Welcome() {
             </div>
           </div>
 
-          <p>My name is David Gasanov, I am a front-end web developer.</p>
+          <p>My name is David Gasanov. I am a front-end web developer.</p>
           <p>
             This is my website where i share my work and personal information.
             If you have any questions or requests, please feel free to contact

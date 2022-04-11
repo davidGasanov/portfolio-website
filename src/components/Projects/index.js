@@ -55,7 +55,7 @@ function Projects() {
 
       <Swiper
         slidesPerView={"auto"}
-        spaceBetween={20}
+        spaceBetween={0}
         pagination={{ clickable: true }}
         modules={[Pagination]}
         className="mySwiper"
