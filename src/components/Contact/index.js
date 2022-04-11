@@ -43,7 +43,7 @@ function index() {
           </span>
         </li>
       </ul>
-      <a href="../documents/portfolio_eng.pdf" download className={`${styles.downLink}`}>
+      <a href="https://drive.google.com/file/d/19YJAGEQ42OaJTrpCU_mwiOitm1v5ehCS/view?usp=sharing" download className={`${styles.downLink}`}>
         <u>Download my CV</u>
       </a>
     </section>
