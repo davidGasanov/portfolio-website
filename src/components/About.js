@@ -21,17 +21,19 @@ function About() {
           <h1 className={`${styles.sectionTitle}`}>A little bit about me</h1>
           <p>
             I come from the Republic of Georgia, a beautiful country located on
-            the eastern end of the black sea.{" "}
+            the eastern end of the black sea. Outside of work, I love to play
+            music, enjoy nature and indulge in the arts.{" "}
           </p>
           <p>
-            In the middle of 2021, I began teaching myself the basics of graphic
-            design and web development. I believe that learning is a constant
-            process, so I put a lot of effort into growing my skills every day.{" "}
+            Learning is a constant process, so I put a lot of effort into
+            growing my skills every day. I love to challange myself, so I give
+            my best to each task and project at hand.{" "}
           </p>
           <p>
-            I use Adobe Illustrator or Figma to create the initial
-            designs and layouts of my websites. Afterwards, I write the code in
-            react and bring them to life.
+            I am passionate about creating responsive layouts and having
+            cosistency in design. I use Adobe Illustrator or Figma to create the
+            initial designs and layouts of my projects. Afterwards, I write the
+            code in react and bring them to life.
           </p>
         </div>
         <hr
