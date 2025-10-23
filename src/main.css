@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
 
 @theme {
@@ -7,4 +9,48 @@
   --color-primary: #fca311;
   --color-light-primary: #e5e5e5;
   --color-light-secondary: #ffffff;
+
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+@utility h1-large {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 72px;
+}
+
+@utility h1-small {
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px;
+}
+
+@utility h2 {
+  font-size: 48px;
+  font-style: normal;
+  line-height: 56px;
+}
+
+@utility h3-small {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+@utility h3-big {
+  font-size: 32px;
+  font-style: normal;
+  line-height: 40px;
+}
+
+@utility h4 {
+  font-size: 24px;
+  font-style: normal;
+  line-height: 32px;
+}
+
+body {
+  @apply font-roboto bg-dark-primary text-light-secondary min-w-screen min-h-screen;
 }

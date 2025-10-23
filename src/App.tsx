@@ -1,10 +1,13 @@
 import MainLayout from "./layout";
 import "./main.css";
+import LandingSection from "./sections/landing";
 
 function App() {
   return (
     <>
-      <MainLayout>Fresh website | Work in progress</MainLayout>
+      <MainLayout>
+        <LandingSection />
+      </MainLayout>
     </>
   );
 }
