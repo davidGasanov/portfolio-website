@@ -22,7 +22,7 @@ const Socials = () => {
     <ul className="flex gap-6 list-none items-center">
       {socials.map(({ href, Icon }) => (
         <li>
-          <a href={href}>
+          <a href={href} target="_blank">
             <Icon
               size={26}
               className="text-light-primary opacity-75 hover:opacity-100 hover:text-primary transition-all duration-300 ease-in-out"

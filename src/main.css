@@ -51,6 +51,48 @@
   line-height: 32px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   @apply font-roboto bg-dark-primary text-light-secondary min-w-screen min-h-screen;
+}
+
+.gradient {
+  position: relative;
+}
+
+.gradient::before,
+.gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    140deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.6) 25%,
+    rgba(0, 0, 0, 0.30) 50%,
+    rgba(0, 0, 0, 0.6) 75%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.gradient::after {
+  opacity: 0;
+  animation: fade 3s ease-in-out infinite alternate;
+  background: linear-gradient(
+    140deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0.8) 50%,
+    rgba(0, 0, 0, 0.2) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
 }
