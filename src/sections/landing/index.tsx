@@ -39,12 +39,12 @@ const LandingSection = () => {
 
           {/* Contact */}
           <div className="w-full flex flex-col items-center gap-4 mt-[150px] md:w-auto md:flex-row">
-            <div className="bg-dark-primary">
+            <div className="bg-dark-primary w-full">
               <div className="w-full flex items-center justify-center gap-4 p-4 py-3 bg-dark-secondary/40 rounded-2xl border border-light-primary/30 shadow-2xl shadow-dark-secondary md:w-auto">
                 <Socials />
               </div>
             </div>
-            <Button className="w-full h-auto md:w-auto shrink-0 flex items-center gap-2 hover:gap-2.5 duration-200">
+            <Button className="w-full justify-center h-auto md:w-auto shrink-0 flex items-center gap-2 hover:gap-2.5 duration-200">
               Contact me
               <FaArrowRight />
             </Button>
