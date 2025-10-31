@@ -1,7 +1,19 @@
 import { FaBootstrap, FaCode, FaCss3, FaHtml5, FaSass } from "react-icons/fa6";
 import Container from "../../components/container";
-import { FaDev, FaReact } from "react-icons/fa";
-import { SiMui, SiShadcnui, SiTypescript, SiVite } from "react-icons/si";
+import { FaDev, FaReact, FaTools } from "react-icons/fa";
+import {
+  SiFormik,
+  SiMui,
+  SiReacthookform,
+  SiReactrouter,
+  SiRedux,
+  SiSanity,
+  SiShadcnui,
+  SiStrapi,
+  SiTypescript,
+  SiVite,
+  SiZod,
+} from "react-icons/si";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { MdStyle } from "react-icons/md";
 import type { IconType } from "react-icons";
@@ -14,14 +26,14 @@ export interface SkillType {
   type: "container" | "child";
   Icon: IconType;
   children?: SkillType[];
-  className?: string; // for stylingw
+  className?: string; // for styling
 }
 
 const skills: SkillType[] = [
   {
     title: "Frontend Technology",
     type: "container",
-    className: 'lg:col-span-8',
+    className: "lg:col-span-12",
     Icon: FaCode,
     children: [
       {
@@ -62,7 +74,7 @@ const skills: SkillType[] = [
         ],
       },
       {
-        title: "Styling tools",
+        title: "Styling",
         Icon: MdStyle,
         type: "container",
         children: [
@@ -93,38 +105,60 @@ const skills: SkillType[] = [
           },
         ],
       },
-    ],
-  },
-  {
-    title: "Styling tools",
-    className: 'lg:col-span-4',
-    Icon: MdStyle,
-    type: "container",
-    children: [
       {
-        title: "MUI",
-        type: "child",
-        Icon: SiMui,
-      },
-      {
-        title: "Shadcn",
-        Icon: SiShadcnui,
-        type: "child",
-      },
-      {
-        title: "Tailwind",
-        Icon: RiTailwindCssFill,
-        type: "child",
-      },
-      {
-        title: "Bootstrap",
-        Icon: FaBootstrap,
-        type: "child",
-      },
-      {
-        title: "Sass",
-        Icon: FaSass,
-        type: "child",
+        title: "Other utilities",
+        Icon: FaTools,
+        type: "container",
+        children: [
+          {
+            title: "Strapi",
+            type: "child",
+            description: "Headless CMS",
+            Icon: SiStrapi,
+          },
+          {
+            title: "Sanity.io",
+            type: "child",
+            description: "Headless CMS",
+            Icon: SiSanity,
+          },
+          {
+            title: "Formik",
+            type: "child",
+            description: "Form management library",
+            Icon: SiFormik,
+          },
+          {
+            title: "React hook form",
+            type: "child",
+            description: "Form management tool for React",
+            Icon: SiReacthookform,
+          },
+          {
+            title: "Yup",
+            type: "child",
+            description: "Schema builder for form validation",
+            Icon: FaCode,
+          },
+          {
+            title: "Zod",
+            type: "child",
+            description: "Typescript-first validation library",
+            Icon: SiZod,
+          },
+          {
+            title: "Redux",
+            type: "child",
+            description: "State management library for React",
+            Icon: SiRedux,
+          },
+          {
+            title: "React router",
+            type: "child",
+            description: "Route management in React",
+            Icon: SiReactrouter,
+          },
+        ],
       },
     ],
   },

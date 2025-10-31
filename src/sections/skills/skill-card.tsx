@@ -2,6 +2,7 @@ import type React from "react";
 import { twMerge } from "tailwind-merge";
 import { tv } from "tailwind-variants";
 import type { SkillType } from ".";
+import { useEffect, useRef, useState } from "react";
 
 const SkillCard: React.FC<SkillType & { index?: number }> = ({
   title,
@@ -9,12 +10,23 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
   children,
   type,
   index,
+  description,
   className,
 }) => {
   const isFirst = index === 0;
   const childrenHaveChildren = !!children?.find((child) =>
     child.hasOwnProperty("children")
   );
+
+  const descriptionRef = useRef<HTMLParagraphElement | null>(null);
+
+  const [descriptionHeight, setDescriptionHeight] = useState(0);
+
+  useEffect(() => {
+    if (descriptionRef?.current?.offsetHeight) {
+      setDescriptionHeight(descriptionRef?.current?.offsetHeight);
+    }
+  }, [descriptionRef?.current?.offsetHeight]);
 
   const card = tv({
     base: "flex flex-col relative z-10 w-full h-full",
@@ -53,14 +65,38 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
 
       <div className={card({ type, isFirst })}>
         <div
+          style={
+            description
+              ? {
+                  height: 32,
+                  transition: "all 0.3s ease-in-out",
+                }
+              : { height: "auto" }
+          }
+          onMouseEnter={(e) => {
+            if (description && descriptionHeight)
+              e.currentTarget.style.height = `${descriptionHeight + 32}px`;
+          }}
+          onMouseLeave={(e) => {
+            if (description) e.currentTarget.style.height = "32px";
+          }}
           className={twMerge(
-            "flex items-center gap-2 text-light-secondary",
             type === "child" &&
-              "p-1 px-2 rounded-2xl cursor-pointer hover:bg-dark-secondary/50"
+              "p-1 px-2 rounded-2xl cursor-pointer hover:bg-dark-secondary/50 transition-all duration-300 ease-in-out overflow-hidden"
+            // description && `hover:h-[${descriptionHeight + 24}px]`
           )}
         >
-          <Icon className="text-primary" size={18} />
-          <h3 className={titleStyle({ type })}>{title}</h3>
+          <div
+            className={twMerge("flex items-center gap-2 text-light-secondary")}
+          >
+            <Icon className="text-primary" size={18} />
+            <h3 className={titleStyle({ type })}>{title}</h3>
+          </div>
+          {type === "child" && description && (
+            <p ref={descriptionRef} className="ml-[26px] opacity-65">
+              {description}
+            </p>
+          )}
         </div>
         {children && (
           <div
