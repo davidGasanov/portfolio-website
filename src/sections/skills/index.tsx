@@ -1,8 +1,29 @@
-import { FaBootstrap, FaCode, FaCss3, FaHtml5, FaSass } from "react-icons/fa6";
+import {
+  FaBookOpen,
+  FaBootstrap,
+  FaBrain,
+  FaBug,
+  FaChartLine,
+  FaCode,
+  FaCss3,
+  FaHtml5,
+  FaPuzzlePiece,
+  FaSass,
+  FaUniversalAccess,
+  FaUsers,
+  FaUserTie,
+} from "react-icons/fa6";
 import Container from "../../components/container";
-import { FaDev, FaReact, FaTools } from "react-icons/fa";
+import {
+  FaCogs,
+  FaDev,
+  FaProjectDiagram,
+  FaReact,
+  FaTools,
+} from "react-icons/fa";
 import {
   SiFormik,
+  SiGit,
   SiMui,
   SiReacthookform,
   SiReactrouter,
@@ -19,6 +40,10 @@ import { MdStyle } from "react-icons/md";
 import type { IconType } from "react-icons";
 import SkillCard from "./skill-card";
 import { twMerge } from "tailwind-merge";
+import { DiVisualstudio } from "react-icons/di";
+import { VscAzureDevops } from "react-icons/vsc";
+import { BiLogoVisualStudio } from "react-icons/bi";
+import { IoLogoVercel } from "react-icons/io5";
 
 export interface SkillType {
   title: string;
@@ -44,31 +69,43 @@ const skills: SkillType[] = [
           {
             title: "HTML",
             type: "child",
+            description:
+              "Structure content semantically to build accessible and well-organized web pages.",
             Icon: FaHtml5,
           },
           {
             title: "CSS",
             type: "child",
+            description:
+              "Style interfaces efficiently, creating responsive and visually appealing layouts.",
             Icon: FaCss3,
           },
           {
-            title: "Typescript",
+            title: "TypeScript",
             type: "child",
+            description:
+              "Enhance code reliability and maintainability with static typing and strong developer tooling.",
             Icon: SiTypescript,
           },
           {
             title: "React",
             type: "child",
+            description:
+              "Build dynamic, component-based UIs with a focus on reusability and state management.",
             Icon: FaReact,
           },
           {
-            type: "child",
             title: "Vite",
+            type: "child",
+            description:
+              "Optimize development speed and build processes with fast, modern tooling.",
             Icon: SiVite,
           },
           {
             title: "NextJS",
             type: "child",
+            description:
+              "Create performant, server-rendered applications with routing, API integration, and SEO optimization.",
             Icon: RiNextjsFill,
           },
         ],
@@ -81,27 +118,37 @@ const skills: SkillType[] = [
           {
             title: "MUI",
             type: "child",
+            description:
+              "Design intuitive, accessible interfaces using a component-driven approach with a strong design system foundation.",
             Icon: SiMui,
           },
           {
             title: "Shadcn",
-            Icon: SiShadcnui,
             type: "child",
+            description:
+              "Build elegant, consistent UIs with reusable components and a clean, utility-first architecture.",
+            Icon: SiShadcnui,
           },
           {
             title: "Tailwind",
-            Icon: RiTailwindCssFill,
             type: "child",
+            description:
+              "Develop responsive, maintainable layouts rapidly through a utility-first CSS workflow.",
+            Icon: RiTailwindCssFill,
           },
           {
             title: "Bootstrap",
-            Icon: FaBootstrap,
             type: "child",
+            description:
+              "Implement reliable and responsive layouts with a grid-based system and prebuilt components.",
+            Icon: FaBootstrap,
           },
           {
             title: "Sass",
-            Icon: FaSass,
             type: "child",
+            description:
+              "Enhance CSS with nesting, variables, and mixins for cleaner and more modular styling.",
+            Icon: FaSass,
           },
         ],
       },
@@ -113,52 +160,172 @@ const skills: SkillType[] = [
           {
             title: "Strapi",
             type: "child",
-            description: "Headless CMS",
+            description:
+              "Develop and maintain structured content through a headless CMS with a clean API design.",
             Icon: SiStrapi,
           },
           {
             title: "Sanity.io",
             type: "child",
-            description: "Headless CMS",
+            description:
+              "Build flexible, real-time content management systems that support seamless collaboration.",
             Icon: SiSanity,
           },
           {
             title: "Formik",
             type: "child",
-            description: "Form management library",
+            description:
+              "Simplify complex form state management and validation workflows in React projects.",
             Icon: SiFormik,
           },
           {
-            title: "React hook form",
+            title: "React Hook Form",
             type: "child",
-            description: "Form management tool for React",
+            description:
+              "Implement performant, hook-based form handling with minimal re-renders and clean validation logic.",
             Icon: SiReacthookform,
           },
           {
             title: "Yup",
             type: "child",
-            description: "Schema builder for form validation",
+            description:
+              "Create robust and reusable schema-based validation for predictable form behavior.",
             Icon: FaCode,
           },
           {
             title: "Zod",
             type: "child",
-            description: "Typescript-first validation library",
+            description:
+              "Guarantee type safety and runtime validation for data structures in TypeScript applications.",
             Icon: SiZod,
           },
           {
             title: "Redux",
             type: "child",
-            description: "State management library for React",
+            description:
+              "Maintain predictable and centralized state management across complex interfaces.",
             Icon: SiRedux,
           },
           {
-            title: "React router",
+            title: "React Router",
             type: "child",
-            description: "Route management in React",
+            description:
+              "Handle navigation and dynamic routing to create intuitive single-page user experiences.",
             Icon: SiReactrouter,
           },
         ],
+      },
+    ],
+  },
+  {
+    title: "Soft Skills & Work Ethic",
+    Icon: FaBrain,
+    className: "lg:col-span-4",
+    type: "container",
+    children: [
+      {
+        title: "Teamwork",
+        type: "child",
+        description: "Effective collaboration within cross-functional teams.",
+        Icon: FaUsers,
+      },
+      {
+        title: "Critical thinking",
+        type: "child",
+        description: "Problem-solving, creating efficient solutions.",
+        Icon: FaBrain,
+      },
+      {
+        title: "Professional attitude",
+        type: "child",
+        description:
+          "Maintaining reliability, communication, and accountability.",
+        Icon: FaUserTie,
+      },
+      {
+        title: "Growth-oriented",
+        type: "child",
+        description:
+          "Constantly learning and improving technical and soft skills.",
+        Icon: FaChartLine,
+      },
+    ],
+  },
+
+  {
+    title: "Development Practices & Methodologies",
+    Icon: FaProjectDiagram,
+    className: "lg:col-span-4",
+    type: "container",
+    children: [
+      {
+        title: "AGILE",
+        type: "child",
+        description:
+          "Following Agile methodologies, working in sprints and adapting quickly to changes in project requirements.",
+        Icon: FaCogs,
+      },
+      {
+        title: "SOLID principles",
+        type: "child",
+        description:
+          "SOLID principles help me to write clean, scalable, and maintainable code.",
+        Icon: FaProjectDiagram,
+      },
+      {
+        title: "Clean code",
+        type: "child",
+        description:
+          "Prioritizing readability and simplicity, ensuring my code is easy to understand and extend.",
+        Icon: FaBookOpen,
+      },
+      {
+        title: "Type safety (TypeScript)",
+        type: "child",
+        description:
+          "I rely on TypeScript to improve reliability, making sure that my code is maintainable and less prone to bugs.",
+        Icon: SiTypescript,
+      },
+      {
+        title: "Accessibility (a11y)",
+        type: "child",
+        description:
+          "The web should be accessible to everyone, so I make sure that my websites have good accessibility.",
+        Icon: FaUniversalAccess,
+      },
+    ],
+  },
+  {
+    title: "Tools and Platforms",
+    type: "container",
+    className: "lg:col-span-4",
+    Icon: FaPuzzlePiece,
+    children: [
+      {
+        title: "VS Code",
+        type: "child",
+        description:
+          "Main development environment with custom extensions setup.",
+        Icon: BiLogoVisualStudio,
+      },
+      {
+        title: "Git",
+        type: "child",
+        description: "Version control for collaboration and code management.",
+        Icon: SiGit,
+      },
+      {
+        title: "Azure",
+        type: "child",
+        description: "Used for CI/CD, cloud hosting, and resource management.",
+        Icon: VscAzureDevops,
+      },
+      {
+        title: "Vercel",
+        type: "child",
+        description:
+          "Deployment platform optimized for Next.js and static sites.",
+        Icon: IoLogoVercel,
       },
     ],
   },

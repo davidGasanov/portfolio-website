@@ -37,7 +37,7 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
         child: "",
       },
       isFirst: {
-        true: "p-4",
+        true: "p-4 ",
         false: "",
       },
     },
@@ -48,6 +48,10 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
       type: {
         container: "text-lg font-semibold font-montserrat",
         child: "text-md font-roboto font-regular",
+      },
+      isFirst: {
+        true: "text-2xl",
+        false: "",
       },
     },
   });
@@ -87,10 +91,10 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
           )}
         >
           <div
-            className={twMerge("flex items-center gap-2 text-light-secondary")}
+            className={twMerge("flex items-center gap-2 text-light-secondary", isFirst && 'mb-2')}
           >
-            <Icon className="text-primary" size={18} />
-            <h3 className={titleStyle({ type })}>{title}</h3>
+            <Icon className="text-primary" size={isFirst ? 22 : 18} />
+            <h3 className={titleStyle({ type, isFirst })}>{title}</h3>
           </div>
           {type === "child" && description && (
             <p ref={descriptionRef} className="ml-[26px] opacity-65">
@@ -101,8 +105,8 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
         {children && (
           <div
             className={twMerge(
-              "rounded-2xl flex gap-4 p-2 pl-4",
-              !childrenHaveChildren && "mt-2 flex-col gap-2"
+              "rounded-2xl flex flex-col md:flex-row gap-4 p-2 pl-4",
+              !childrenHaveChildren && "mt-2 md:flex-col gap-2"
             )}
           >
             {children?.map((child) => (
