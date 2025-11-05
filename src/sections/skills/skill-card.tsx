@@ -33,7 +33,7 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
     variants: {
       type: {
         container:
-          "rounded-2xl bg-dark-secondary/40 border border-light-primary/10 p-4 hover:border-light-primary/15 transition-all duration-200 ease-in-out shadow-md shadow-dark-secondary/50",
+          "rounded-2xl bg-dark-secondary/50 border border-light-primary/10 p-4 hover:border-light-primary/15 transition-all duration-200 ease-in-out shadow-md shadow-dark-secondary/50",
         child: "",
       },
       isFirst: {
@@ -86,18 +86,21 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
           }}
           className={twMerge(
             type === "child" &&
-              "p-1 px-2 rounded-2xl cursor-pointer hover:bg-dark-secondary/50 transition-all duration-300 ease-in-out overflow-hidden"
+              "p-1 px-2 rounded-2xl cursor-pointer hover:bg-dark-secondary/60 transition-all duration-300 ease-in-out overflow-hidden"
             // description && `hover:h-[${descriptionHeight + 24}px]`
           )}
         >
           <div
-            className={twMerge("flex items-center gap-2 text-light-secondary", isFirst && 'mb-2')}
+            className={twMerge(
+              "flex items-center gap-2 text-light-secondary",
+              isFirst && "mb-2"
+            )}
           >
             <Icon className="text-primary" size={isFirst ? 22 : 18} />
             <h3 className={titleStyle({ type, isFirst })}>{title}</h3>
           </div>
           {type === "child" && description && (
-            <p ref={descriptionRef} className="ml-[26px] opacity-65">
+            <p ref={descriptionRef} className="ml-[26px] opacity-65 text-sm">
               {description}
             </p>
           )}
