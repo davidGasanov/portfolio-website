@@ -338,11 +338,11 @@ const SkillsSection = () => {
         <div
           className={twMerge("flex flex-col gap-3 items-center text-center")}
         >
-          <h1 className="text-4xl md:h1-large font-bold font-montserrat text-primary">
+          <h1 className="text-4xl md:h1-small font-bold font-montserrat text-primary">
             Skills
           </h1>
           <h2 className="opacity-70 font-light max-w-[500px] xl:max-w-[640px] ">
-            Skills section description here
+            The technology I use to create performant and accessible websites
           </h2>
         </div>
 
