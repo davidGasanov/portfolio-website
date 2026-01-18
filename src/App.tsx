@@ -1,6 +1,7 @@
 import MainLayout from "./layout";
 import "./main.css";
 import LandingSection from "./sections/landing";
+import ProjectsSection from "./sections/projects";
 import SkillsSection from "./sections/skills";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <MainLayout>
         <LandingSection />
         <SkillsSection />
+        <ProjectsSection/>
       </MainLayout>
     </>
   );

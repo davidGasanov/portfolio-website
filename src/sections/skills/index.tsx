@@ -334,12 +334,12 @@ const skills: SkillType[] = [
 const SkillsSection = () => {
   return (
     <section className="w-full min-h-screen bg-dark-secondary/25">
-      <Container className="pt-20 md:pt-24">
+      <Container className="pt-20 md:pt-24 pb-20 mt:pb-24">
         <div
           className={twMerge("flex flex-col gap-3 items-center text-center")}
         >
           <h1 className="text-4xl md:h1-small font-bold font-montserrat text-primary">
-            Skills
+            SKILLS
           </h1>
           <h2 className="opacity-70 font-light max-w-[500px] xl:max-w-[640px] ">
             The technology I use to create performant and accessible websites

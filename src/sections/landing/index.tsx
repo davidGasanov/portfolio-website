@@ -24,7 +24,7 @@ const LandingSection = () => {
       </div>
       <Container className="pt-20 md:pt-[100px]">
         <div className="flex flex-col gap-3 items-center text-center">
-          <h1 className="text-4xl md:h1-large font-bold font-montserrat text-primary">
+          <h1 className="text-4xl md:h1-large font-extrabold font-montserrat text-primary uppercase">
             David Gasanov
           </h1>
           <h2 className="text-md md:text-2xl opacity-90">
