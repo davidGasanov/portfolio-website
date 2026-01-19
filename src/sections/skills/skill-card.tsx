@@ -33,7 +33,7 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
     variants: {
       type: {
         container:
-          "rounded-2xl bg-dark-secondary/50 border border-light-primary/10 p-4 hover:border-light-primary/15 transition-all duration-200 ease-in-out shadow-md shadow-dark-secondary/50",
+          "rounded-2xl bg-dark-secondary/40 border border-light-primary/10 p-4 hover:border-light-primary/15 transition-all duration-200 ease-in-out shadow-md shadow-dark-secondary/50",
         child: "",
       },
       isFirst: {

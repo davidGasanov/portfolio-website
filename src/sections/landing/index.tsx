@@ -44,7 +44,9 @@ const LandingSection = () => {
                 <Socials />
               </div>
             </div>
-            <Button className="w-full justify-center h-auto md:w-auto shrink-0 flex items-center gap-2 hover:gap-2.5 duration-200">
+            <Button
+              className="w-full justify-center h-auto md:w-auto shrink-0 flex items-center gap-2 duration-200"
+            >
               Contact me
               <FaArrowRight />
             </Button>

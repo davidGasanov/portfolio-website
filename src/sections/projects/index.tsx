@@ -47,7 +47,7 @@ const projects = [
       "MUI",
       "Zod",
       "React hook form",
-      "Sanity CMS"
+      "Sanity CMS",
     ],
     liveUrl: "https://avorix.com",
     image: "/project-imgs/avorix.png",
@@ -61,13 +61,13 @@ const ProjectsSection = () => {
         <div
           className={twMerge("flex flex-col gap-3 items-center text-center")}
         >
-          <h1 className="text-4xl md:h1-small font-bold font-montserrat text-primary">
+          <h2 className="text-4xl md:h1-small font-bold font-montserrat text-primary">
             PROJECTS
-          </h1>
-          <h2 className="opacity-70 font-light max-w-[500px] xl:max-w-[640px] ">
+          </h2>
+          <h3 className="opacity-70 font-light max-w-[500px] xl:max-w-[640px] ">
             A selection of projects showcasing my experience, problem-solving
             approach, and ongoing work.
-          </h2>
+          </h3>
         </div>
         <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
