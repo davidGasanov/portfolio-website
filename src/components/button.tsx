@@ -7,18 +7,18 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const Button = ({ variant = "primary", className, ...props }: ButtonProps) => {
   const button = tv({
-    base: "pt-4 pr-[24px] pb-[14px] pl-[27px] transition-all duration-200 ease-in-out rounded-[14px] font-bold cursor-pointer disabled:cursor-default disabled:hover-none text-[15px] font-roboto leading-snug disabled:opacity-50",
+    base: "pt-4 pr-[24px] pb-[14px] pl-[27px] transition-all duration-200 ease-in-out rounded-[14px] font-bold cursor-pointer text-[15px] font-roboto leading-snug",
     variants: {
       variant: {
-        // Priamary
+        // Primary
         primary:
-          "bg-dark-secondary text-light-secondary hover:bg-primary hover:text-dark-primary disabled:hover:bg-dark-secondary",
-        //   Secondary (Light)
+          "bg-dark-secondary text-light-secondary hover:bg-primary hover:text-dark-primary disabled:bg-gray-400 disabled:text-gray-600 disabled:cursor-not-allowed disabled:hover:bg-gray-400 disabled:hover:text-gray-600",
+        // Secondary (Light)
         "secondary-light":
-          "bg-mirage-blue text-water-white border border-water-white hover:bg-water-white hover:text-mirage-blue disabled:hover:bg-mirage-blue disabled:hover:text-water-white",
-        //   Secondary (Dark)
+          "bg-mirage-blue text-water-white border border-water-white hover:bg-water-white hover:text-mirage-blue disabled:bg-gray-400 disabled:text-gray-600 disabled:border-gray-600 disabled:cursor-not-allowed disabled:hover:bg-gray-400 disabled:hover:text-gray-600",
+        // Secondary (Dark)
         "secondary-dark":
-          "bg-none text-san-juan-blue border border-san-juan-blue hover:bg-san-juan-blue hover:text-water-white disabled:hover:bg-san-juan-blue disabled:hover:text-water-white",
+          "bg-none text-san-juan-blue border border-san-juan-blue hover:bg-san-juan-blue hover:text-water-white disabled:bg-transparent disabled:text-gray-400 disabled:border-gray-400 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-gray-400",
       },
     },
   });

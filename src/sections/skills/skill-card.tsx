@@ -79,15 +79,14 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
           }
           onMouseEnter={(e) => {
             if (description && descriptionHeight)
-              e.currentTarget.style.height = `${descriptionHeight + 32}px`;
+              e.currentTarget.style.height = `${descriptionHeight + 38}px`;
           }}
           onMouseLeave={(e) => {
             if (description) e.currentTarget.style.height = "32px";
           }}
           className={twMerge(
             type === "child" &&
-              "p-1 px-2 rounded-2xl cursor-pointer hover:bg-dark-secondary/60 transition-all duration-300 ease-in-out overflow-hidden"
-            // description && `hover:h-[${descriptionHeight + 24}px]`
+              "p-2 px-2 rounded-2xl cursor-pointer hover:bg-dark-secondary/60 transition-all duration-300 ease-in-out overflow-hidden"
           )}
         >
           <div
@@ -100,7 +99,7 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
             <h3 className={titleStyle({ type, isFirst })}>{title}</h3>
           </div>
           {type === "child" && description && (
-            <p ref={descriptionRef} className="ml-[26px] opacity-65 text-sm">
+            <p ref={descriptionRef} className="ml-[26px] mt-1 opacity-65 text-sm">
               {description}
             </p>
           )}

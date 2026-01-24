@@ -1,5 +1,6 @@
 import MainLayout from "./layout";
 import "./main.css";
+import Contact from "./sections/contact";
 import ExperienceSection from "./sections/experience";
 import LandingSection from "./sections/landing";
 import ProjectsSection from "./sections/projects";
@@ -13,6 +14,7 @@ function App() {
         <SkillsSection />
         <ProjectsSection/>
         <ExperienceSection/>
+        <Contact/>
       </MainLayout>
     </>
   );
