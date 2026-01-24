@@ -51,7 +51,7 @@ export interface SkillType {
   type: "container" | "child";
   Icon: IconType;
   children?: SkillType[];
-  className?: string; // for styling
+  className?: string;
 }
 
 const skills: SkillType[] = [
@@ -333,15 +333,81 @@ const skills: SkillType[] = [
 
 const SkillsSection = () => {
   return (
-    <section className="w-full min-h-screen bg-dark-secondary/25">
-      <Container className="pt-20 md:pt-24 pb-20 mt:pb-24">
+    <section className="w-full min-h-screen bg-dark-secondary/25 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 w-full h-full">
+        {/* Subtle grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(252, 163, 17, 0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(252, 163, 17, 0.3) 1px, transparent 1px)
+            `,
+            backgroundSize: "100px 100px",
+          }}
+        />
+
+        {/* Floating gradient blob - top right */}
+        <div
+          className="absolute -top-[340px] -right-[340px] w-[840px] h-[840px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-slow 30s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute -top-[140px] right-[240px] w-[340px] h-[340px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-slow 30s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute top-[240px] -right-[200px] w-[540px] h-[540px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-slow 30s ease-in-out infinite",
+          }}
+        />
+
+        {/* Floating gradient blob - bottom left */}
+        <div
+          className="absolute -bottom-[220px] -left-[220px] w-[500px] h-[500px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(252, 163, 17, 0.12) 0%, transparent 70%)",
+            filter: "blur(90px)",
+            animation: "float-slow 35s ease-in-out infinite 5s",
+          }}
+        />
+
+        {/* Floating gradient blob - center */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%)",
+            filter: "blur(100px)",
+            animation: "float-slow 40s ease-in-out infinite 10s",
+          }}
+        />
+      </div>
+
+      <Container className="pt-20 md:pt-24 pb-20 mt:pb-24 relative z-10">
         <div
           className={twMerge("flex flex-col gap-3 items-center text-center")}
         >
           <h2 className="text-4xl md:h1-small font-bold font-montserrat text-primary">
             SKILLS
           </h2>
-          <h3 className="opacity-70 font-light max-w-[500px] xl:max-w-[640px] ">
+          <h3 className="opacity-70 font-light max-w-[500px] xl:max-w-[640px]">
             The technology I use to create performant and accessible websites
           </h3>
         </div>

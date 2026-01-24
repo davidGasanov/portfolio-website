@@ -56,7 +56,54 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section className="w-full min-h-screen bg-dark-secondary/0">
+    <section className="w-full min-h-screen bg-dark-secondary/0 relative">
+      <div className="absolute inset-0 w-full h-full overflow-clip">
+        <div
+          className="absolute top-[240px] -left-[340px] w-[840px] h-[840px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(252, 163, 17, 0.1) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-slow 30s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute -top-[340px] -left-[440px] w-[840px] h-[840px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(252, 163, 17, 0.1) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-slow 30s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute top-[140px] -right-[400px] w-[840px] h-[840px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-slow 30s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute -bottom-[540px] -right-[400px] w-[840px] h-[840px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-slow 30s ease-in-out infinite",
+          }}
+        />
+        <div
+          className="absolute -bottom-[540px] right-[100px] w-[840px] h-[840px] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            animation: "float-slow 30s ease-in-out infinite",
+          }}
+        />
+      </div>
       <Container className="py-40">
         <div
           className={twMerge("flex flex-col gap-3 items-center text-center")}
