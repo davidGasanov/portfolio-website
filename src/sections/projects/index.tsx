@@ -2,6 +2,7 @@ import type { IconType } from "react-icons";
 import { twMerge } from "tailwind-merge";
 import Container from "../../components/container";
 import { ProjectCard } from "./project-card";
+import { Fade, Slide } from "react-awesome-reveal";
 
 export interface SkillType {
   title: string;
@@ -56,26 +57,11 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section className="w-full min-h-screen bg-dark-secondary/0 relative">
+    <section
+      id="projects"
+      className="w-full min-h-screen bg-linear-to-b to-dark-secondary/0 from-dark-secondary/25 relative"
+    >
       <div className="absolute inset-0 w-full h-full overflow-clip">
-        <div
-          className="absolute top-[240px] -left-[340px] w-[840px] h-[840px] rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(252, 163, 17, 0.1) 0%, transparent 70%)",
-            filter: "blur(80px)",
-            animation: "float-slow 30s ease-in-out infinite",
-          }}
-        />
-        <div
-          className="absolute -top-[340px] -left-[440px] w-[840px] h-[840px] rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(252, 163, 17, 0.1) 0%, transparent 70%)",
-            filter: "blur(80px)",
-            animation: "float-slow 30s ease-in-out infinite",
-          }}
-        />
         <div
           className="absolute top-[140px] -right-[400px] w-[840px] h-[840px] rounded-full"
           style={{
@@ -108,17 +94,34 @@ const ProjectsSection = () => {
         <div
           className={twMerge("flex flex-col gap-3 items-center text-center")}
         >
-          <h2 className="text-4xl md:h1-small font-bold font-montserrat text-primary">
-            PROJECTS
-          </h2>
-          <h3 className="opacity-70 font-light max-w-[500px] xl:max-w-[640px] ">
-            A selection of projects showcasing my experience, problem-solving
-            approach, and ongoing work.
-          </h3>
+          <Fade triggerOnce>
+            <Slide direction="up" triggerOnce>
+              <h2 className="text-4xl md:h1-small font-bold font-montserrat text-primary">
+                PROJECTS
+              </h2>
+            </Slide>
+          </Fade>
+          <Fade triggerOnce delay={200}>
+            <Slide direction="up" triggerOnce>
+              <h3 className="opacity-70 font-light max-w-[500px] md:max-w-[340px] text-sm">
+                A selection of projects showcasing my experience,
+                problem-solving approach, and ongoing work.
+              </h3>
+            </Slide>
+          </Fade>
         </div>
         <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+          {projects.map((project, index) => (
+            <Fade key={project.title} delay={index * 300} triggerOnce>
+              <Slide
+                direction="up"
+                delay={index * 300}
+                triggerOnce
+                className="h-full"
+              >
+                <ProjectCard {...project} />
+              </Slide>
+            </Fade>
           ))}
         </div>
       </Container>

@@ -1,3 +1,4 @@
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 import { ExperienceCard, type ExperienceItem } from "./experience-card";
 
 export const ExperienceTimeline = ({ items }: { items: ExperienceItem[] }) => {
@@ -18,7 +19,11 @@ export const ExperienceTimeline = ({ items }: { items: ExperienceItem[] }) => {
           <div className="relative z-10 mt-7 h-4 w-4 rounded-full bg-primary/90 border-[3px] border-dark-primary" />
 
           <div className="flex-1">
-            <ExperienceCard item={item} />
+            <Zoom triggerOnce>
+              <Fade triggerOnce>
+                <ExperienceCard item={item} />
+              </Fade>
+            </Zoom>
           </div>
         </div>
       ))}

@@ -44,6 +44,7 @@ import { DiVisualstudio } from "react-icons/di";
 import { VscAzureDevops } from "react-icons/vsc";
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { IoLogoVercel } from "react-icons/io5";
+import { Fade, Slide } from "react-awesome-reveal";
 
 export interface SkillType {
   title: string;
@@ -333,7 +334,10 @@ const skills: SkillType[] = [
 
 const SkillsSection = () => {
   return (
-    <section className="w-full min-h-screen bg-dark-secondary/25 relative overflow-hidden">
+    <section
+      id="skills"
+      className="w-full min-h-screen bg-dark-secondary/25 relative overflow-hidden"
+    >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 w-full h-full">
         {/* Subtle grid pattern */}
@@ -404,12 +408,22 @@ const SkillsSection = () => {
         <div
           className={twMerge("flex flex-col gap-3 items-center text-center")}
         >
-          <h2 className="text-4xl md:h1-small font-bold font-montserrat text-primary">
-            SKILLS
-          </h2>
-          <h3 className="opacity-70 font-light max-w-[500px] xl:max-w-[640px]">
-            The technology I use to create performant and accessible websites
-          </h3>
+          <Fade triggerOnce>
+            <Slide direction="up" triggerOnce>
+              <h2 className="text-4xl md:h1-small font-bold font-montserrat text-primary">
+                SKILLS
+              </h2>
+            </Slide>
+          </Fade>
+          <Fade triggerOnce delay={200}>
+            <Slide direction="up" triggerOnce>
+              {" "}
+              <h3 className="opacity-70 font-light max-w-[500px] xl:max-w-[640px] text-sm">
+                The technology I use to create performant and accessible
+                websites
+              </h3>
+            </Slide>
+          </Fade>
         </div>
 
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-4">

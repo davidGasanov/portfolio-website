@@ -33,7 +33,7 @@ export const ExperienceCard = ({ item }: Props) => {
       className="
         group relative overflow-hidden rounded-2xl
         border border-white/10
-        bg-linear-to-br from-dark-secondary/35 to-transparent
+        bg-linear-to-br from-dark-secondary/55 to-transparent
         p-6 backdrop-blur transition-all duration-200 ease-in-out"
     >
       {/* Cursor spotlight */}

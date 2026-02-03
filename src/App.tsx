@@ -1,3 +1,4 @@
+import Reveal, { Fade } from "react-awesome-reveal";
 import MainLayout from "./layout";
 import "./main.css";
 import Contact from "./sections/contact";
@@ -10,11 +11,13 @@ function App() {
   return (
     <>
       <MainLayout>
-        <LandingSection />
+        <Fade cascade triggerOnce>
+          <LandingSection />
+        </Fade>
         <SkillsSection />
-        <ProjectsSection/>
-        <ExperienceSection/>
-        <Contact/>
+        <ProjectsSection />
+        <ExperienceSection />
+        <Contact />
       </MainLayout>
     </>
   );

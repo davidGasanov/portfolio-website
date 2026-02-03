@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 import { tv } from "tailwind-variants";
 import type { SkillType } from ".";
 import { useEffect, useRef, useState } from "react";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const SkillCard: React.FC<SkillType & { index?: number }> = ({
   title,
@@ -15,7 +16,7 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
 }) => {
   const isFirst = index === 0;
   const childrenHaveChildren = !!children?.find((child) =>
-    child.hasOwnProperty("children")
+    child.hasOwnProperty("children"),
   );
 
   const descriptionRef = useRef<HTMLParagraphElement | null>(null);
@@ -60,7 +61,7 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
     <div
       className={twMerge(
         "relative w-full col-span-12 lg:col-span-6",
-        className
+        className,
       )}
     >
       {type === "container" && (
@@ -86,20 +87,23 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
           }}
           className={twMerge(
             type === "child" &&
-              "p-2 px-2 rounded-2xl cursor-pointer hover:bg-dark-secondary/60 transition-all duration-300 ease-in-out overflow-hidden"
+              "p-2 px-2 rounded-2xl cursor-pointer hover:bg-dark-secondary/60 transition-all duration-300 ease-in-out overflow-hidden",
           )}
         >
           <div
             className={twMerge(
               "flex items-center gap-2 text-light-secondary",
-              isFirst && "mb-2"
+              isFirst && "mb-2",
             )}
           >
             <Icon className="text-primary" size={isFirst ? 22 : 18} />
             <h3 className={titleStyle({ type, isFirst })}>{title}</h3>
           </div>
           {type === "child" && description && (
-            <p ref={descriptionRef} className="ml-[26px] mt-1 opacity-65 text-sm">
+            <p
+              ref={descriptionRef}
+              className="ml-[26px] mt-1 opacity-65 text-sm"
+            >
               {description}
             </p>
           )}
@@ -108,7 +112,7 @@ const SkillCard: React.FC<SkillType & { index?: number }> = ({
           <div
             className={twMerge(
               "rounded-2xl flex flex-col md:flex-row gap-4 p-2 pl-4",
-              !childrenHaveChildren && "mt-2 md:flex-col gap-2"
+              !childrenHaveChildren && "mt-2 md:flex-col gap-2",
             )}
           >
             {children?.map((child) => (

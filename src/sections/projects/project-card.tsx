@@ -16,6 +16,7 @@ type ProjectCardProps = {
 const card = tv({
   slots: {
     root: [
+      "h-full",
       "relative group overflow-hidden rounded-2xl",
       "border border-white/10 bg-dark-secondary/40",
       "transition-transform duration-300 flex flex-col",
