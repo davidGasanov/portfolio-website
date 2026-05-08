@@ -13,7 +13,28 @@ export interface SkillType {
   className?: string; // for styling
 }
 
-const projects = [
+type ProjectVariant = "default" | "wip";
+
+interface ProjectItem {
+  title: string;
+  description: string;
+  tech: string[];
+  image: string;
+  repoUrl?: string;
+  liveUrl?: string;
+  variant?: ProjectVariant;
+}
+
+const projects: ProjectItem[] = [
+  {
+    title: "Eka's Bakery",
+    description:
+      "A full-stack Next.js WIP with an admin panel for product creation and deletion, a scalable Prisma-managed backend, dynamic product pages, and SEO optimization; Stripe payments and user authentication are planned next.",
+    tech: ["NextJS", "Typescript", "Tailwind", "Prisma"],
+    liveUrl: "https://ekas-bakery.vercel.app",
+    image: "/project-imgs/ekas-bakery.png",
+    variant: "wip",
+  },
   {
     title: "Paws",
     description:
@@ -39,7 +60,22 @@ const projects = [
     image: "/project-imgs/pay-api.png",
   },
   {
-    title: "Avorix",
+    title: "Avorix Auto Transport",
+    description:
+      "SEO-focused auto transport platform with scalable service and route pages, plus a quote calculator driven by complex pricing logic and third-party API integrations.",
+    tech: [
+      "NextJS",
+      "Typescript",
+      "Tailwind",
+      "Zod",
+      "Yup",
+      "Sanity CMS",
+    ],
+    liveUrl: "https://avorixautotransport.com",
+    image: "/project-imgs/aat.png",
+  },
+  {
+    title: "Avorix.com",
     description:
       "A modern web platform built with custom components, form validation, and CMS-driven content, designed to showcase a scalable enterprise UI and organized content structure. The project features dynamic blog content managed via a CMS, validated interactive forms, and a cohesive, user-focused interface that reflects real-world product design principles.",
     tech: [

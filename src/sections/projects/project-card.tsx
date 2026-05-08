@@ -8,6 +8,7 @@ type ProjectCardProps = {
   description: string;
   image: string;
   tech: string[];
+  variant?: "default" | "wip";
   repoUrl?: string;
   liveUrl?: string;
   className?: string;
@@ -37,6 +38,12 @@ const card = tv({
     ],
     content: "relative p-5 space-y-3 flex-1 flex flex-col",
     title: "font-montserrat text-xl font-semibold",
+    statusRow: "flex items-center gap-2",
+    statusBadge: [
+      "text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full",
+      "bg-amber-400/15 text-amber-300",
+      "border border-amber-300/30",
+    ],
     description: "text-sm text-light-primary/80",
     techList: "flex flex-wrap gap-2 pt-2",
     badge: [
@@ -60,6 +67,7 @@ export function ProjectCard({
   description,
   image,
   tech,
+  variant = "default",
   repoUrl,
   liveUrl,
   className,
@@ -97,7 +105,10 @@ export function ProjectCard({
 
       {/* Content */}
       <div className={styles.content()}>
-        <h3 className={styles.title()}>{title}</h3>
+        <div className={styles.statusRow()}>
+          <h3 className={styles.title()}>{title}</h3>
+          {variant === "wip" && <span className={styles.statusBadge()}>WIP</span>}
+        </div>
         <p className={styles.description()}>{description}</p>
 
         <div className="flex flex-col flex-1 justify-end">
